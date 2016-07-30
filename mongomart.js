@@ -105,11 +105,14 @@ router.get("/", function(req, res){
 router.post("/google", function(req, res){
   "use strict";
   var userEmail = req.body.userEmail;
+  console.log("email id : " + userEmail);
+  email = userEmail;
   //save userEmail in userCollection
   user.addUser(userEmail, function(user){
-    console.log(user);
+    console.log("user & email : "+user+", "+user.email);
     USERID = user._id;
     email = user.email;
+
   });
 res.redirect("/home");
 
@@ -175,7 +178,7 @@ res.redirect("/home");
 
             items.getRelatedItems(function(relatedItems) {
 
-                console.log(relatedItems);
+                console.log(email +", "+relatedItems);
                 res.render("item",
                            {
                                userId: USERID,
@@ -193,12 +196,13 @@ res.redirect("/home");
 
     router.post("/item/:itemId/:email/reviews", function(req, res) {
         "use strict";
-
+        console.log("in post review " + email);
         var itemId = parseInt(req.params.itemId);
         var review = req.body.review;
         var name = req.body.name;
         var stars = parseInt(req.body.stars);
         var email = req.params.email;
+        console.log("Review post : " + email);
 
         items.addReview(itemId, review, name, stars, email, function(itemDoc) {
             res.redirect("/item/" + itemId);

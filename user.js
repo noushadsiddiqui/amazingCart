@@ -30,7 +30,7 @@ var MongoClient = require('mongodb').MongoClient,
             this.userCollection.insertOne(userDoc,
                 function(err, result) {
                     assert.equal(null, err);
-                    callback(result);
+                    callback(userDoc);
                 });
         };
       }

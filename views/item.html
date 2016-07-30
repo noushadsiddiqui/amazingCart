@@ -10,7 +10,7 @@
     <link rel="icon" href="/static/img/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon" />
 
-    <title>{{item.title}} - MongoMart</title>
+    <title>{{item.title}} - AmazingCart</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="/static/css/bootstrap.min.css" rel="stylesheet">
@@ -132,7 +132,7 @@
 
         <!-- Comments Form -->
         <div class="well">
-          <h4>Add a Review:</h4>
+          <h4>Hi {{email}}, Add a Review: </h4>
           <form action="/item/{{item._id}}/{{email}}/reviews" role="form" method="post">
             <div class="form-group">
               <label for="review">Review:</label>
