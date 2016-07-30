@@ -108,9 +108,12 @@
             <!-- Comment -->
             <div>
               <div>
-                <h4 class="media-heading">{{review.name}} {{review.email}}
+                  <h4 class="media-heading"><a href="#" class="applozic-launcher" data-mck-id={{review.email}} data-mck-name={{review.email}}>{{review.name}}</a>
+                      <small>{{review.date|date}}</small>
+                  </h4>
+                <!-- <h4 class="media-heading">{{review.name}}
                   <small>{{review.date|date}}</small>
-                </h4>
+                </h4> -->
                 <div class="ratings" style="padding-left: 0px;">
 
                   {% for num in range(1,6) %}
