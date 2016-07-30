@@ -52,7 +52,7 @@ var ITEMS_PER_PAGE = 5;
 var USERID = "558098a65133816958968d88";
 var email = "";
 
-MongoClient.connect('mongodb://localhost:27017/mongomart', function(err, db) {
+MongoClient.connect('mongodb://ec2-52-26-104-86.us-west-2.compute.amazonaws.com:27017/mongomart', function(err, db) {
     "use strict";
 
     assert.equal(null, err);

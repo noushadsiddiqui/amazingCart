@@ -14,10 +14,10 @@ var initilizeApplozic = function(email,imagelink) {
 
 
 	window.applozic.init({appId: 'a66494a8ebe79ccedf010a1eb',     // obtained from Step 1 (required)
-	    userId: "email",             // loggedIn user Id (required)
-	    userName: "email",  // loggedIn user name (optional)
-	    imageLink :"imagelink",        // loggedIn user image url (optional)
-	    email:"email",      // optional
+	    userId: email,             // loggedIn user Id (required)
+	    userName: email,  // loggedIn user name (optional)
+	    imageLink :imagelink,        // loggedIn user image url (optional)
+	    email:email,      // optional
 	    // contactNumber: 'CONTACT_NUMBER_WITH_INTERNATIONAL_CODE eg: +919535008745', //optional
 	    // accessToken: 'PUT_USER_AUTHENTICATION_TOKEN_HERE',   // optional
 	    // authenticationTypeId : 'PUT_AUTHENTICATION_TYPE_ID_HERE',
