@@ -25,12 +25,24 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+    	content="784757641064-civ7eme5p1b25mgmr4i8qeu8ptsgv6vl.apps.googleusercontent.com">
 
 </head>
 
 <body>
 
 {% include "includes/nav.html" %}
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+      window.location.href="/";
+    });
+  }
+</script>
 
 <!-- Page Content -->
 <div class="container">
@@ -38,7 +50,7 @@
     <div class="row">
         <div class="col-md-12">
             <ol class="breadcrumb">
-                <li><a href="/">Home</a></li>
+                <li><a href="/home">Home</a></li>
                 <li class="active">{{category_param}}</li>
             </ol>
         </div>

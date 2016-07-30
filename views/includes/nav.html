@@ -15,7 +15,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">Welcome</a>
+                    <a href="#">Welcome {{email}}</a>
                 </li>
                 <li>
                     <a href="#">Locations</a>
@@ -23,7 +23,11 @@
                 <li>
                     <a href="#"><strong>Admin Panel</strong></a>
                 </li>
+                <li>
+                  <a href="#" onclick="signOut();"><strong>Sign Out</strong></a>
+                </li>
             </ul>
+            <div id="gSignIn" class="g-signin2" style="display:none;"></div>
             <div class="collapse navbar-collapse">
                 <form class="navbar-form navbar-right" role="search" action="/search">
                     <div class="form-group">
