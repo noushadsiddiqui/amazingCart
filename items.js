@@ -290,7 +290,7 @@ function ItemDAO(database) {
     };
 
 
-    this.addReview = function(itemId, comment, name, stars, callback) {
+    this.addReview = function(itemId, comment, name, stars, email, callback) {
         "use strict";
 
         /*
@@ -309,6 +309,7 @@ function ItemDAO(database) {
             name: name,
             comment: comment,
             stars: stars,
+            email: email,
             date: Date.now()
         }
 
