@@ -88,6 +88,7 @@ MongoClient.connect('mongodb://localhost:27017/mongomart', function(err, db) {
                                          itemCount: itemCount,
                                          pages: numPages,
                                          page: page,
+                                         email: email,
                                          items: pageItems });
 
                 });

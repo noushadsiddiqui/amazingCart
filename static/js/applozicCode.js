@@ -1,6 +1,6 @@
-$(function(){
+/*$(function(){
 
-});
+});*/
 var initilizeApplozic = function(email,imagelink) {
 	(function(d, m){var s, h;
 	  s = document.createElement("script");
@@ -12,7 +12,7 @@ var initilizeApplozic = function(email,imagelink) {
 	  window.applozic=m;
 	  m.init=function(t){m._globals=t;}})(document, window.applozic || {}  );
 
-	
+
 	window.applozic.init({appId: 'a66494a8ebe79ccedf010a1eb',     // obtained from Step 1 (required)
 	    userId: "email",             // loggedIn user Id (required)
 	    userName: "email",  // loggedIn user name (optional)
